@@ -1,0 +1,44 @@
+<c-row>
+    <c-col xs="4">
+
+    </c-col>
+    <c-col xs="4">
+      <c-card  class="mb-4">
+        <c-card-header ngPreserveWhitespaces>
+          <strong>Adicionar Categoría</strong>
+        </c-card-header>
+        <c-card-body>
+            <form #customStylesForm="ngForm"
+                  (ngSubmit)="onSubmit1()"
+                  [validated]="false"
+                  cForm
+                  
+            >
+                <c-row>                    
+                    <label cLabel for="name">Nombre</label>
+                    <input cFormControl id="name" name="name" type="text" />
+                    <c-form-feedback [valid]="false">Looks good!</c-form-feedback>
+                    
+                </c-row>
+                <c-row  class="mb-1">                    
+                    <label cLabel for="description">Descripción</label>
+                    <input cFormControl id="description" name="description"(change)="onDescriptionChange($event)" type="text"  />
+                    <c-form-feedback [valid]="false">Looks good!</c-form-feedback>                        
+                </c-row>                    
+                <c-row>                    
+                    <c-col xs="8">
+
+                    </c-col>
+                    <c-col xs="4">
+                        <button cButton disabled class="me-1" color="primary" type="submit">
+                          Adicionar
+                        </button>                        
+                    </c-col>
+                </c-row>           
+            </form>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col xs="4"></c-col>
+</c-row>
+  

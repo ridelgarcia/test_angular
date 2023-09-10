@@ -14,12 +14,16 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '',
-    component: DefaultLayoutComponent,
+    path: '',    
     data: {
       title: 'Home'
     },
     children: [
+      {
+        path: 'user',
+        loadChildren: () =>
+          import('./views/user/user.module').then((m) => m.UserModule)
+      },
       {
         path: 'dashboard',
         loadChildren: () =>
@@ -64,6 +68,16 @@ const routes: Routes = [
         path: 'widgets',
         loadChildren: () =>
           import('./views/widgets/widgets.module').then((m) => m.WidgetsModule)
+      },
+      {
+        path: 'items',
+        loadChildren: () =>
+          import('./views/item/item.module').then((m) => m.ItemModule)
+      },
+      {
+        path: 'category',
+        loadChildren: () =>
+          import('./views/category/category.module').then((m) => m.CategoryModule)
       },
       {
         path: 'pages',

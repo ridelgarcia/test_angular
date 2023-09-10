@@ -1,41 +1,44 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddCategoryComponent } from './add-category/add-category.component';
-import { SearchCategoryComponent } from './search-category/search-category.component';
-import { CategoryRoutingModule } from './category-routing.module';
+import { ActivateAccountComponent } from './activate-account/activate-account.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { UserRoutingModule } from './user-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   ButtonGroupModule,
   ButtonModule,
   CardModule,
+  AvatarModule,
   DropdownModule,
+  SpinnerModule,
   FormModule,
   GridModule,
   ListGroupModule,
   SharedModule
 } from '@coreui/angular';
 
-import { DocsComponentsModule } from '@docs-components/docs-components.module';
+
 
 
 
 
 @NgModule({
   declarations: [
-    AddCategoryComponent,
-    SearchCategoryComponent,
+    ActivateAccountComponent,
+    ChangePasswordComponent,
     
   ],
   imports: [
     CommonModule,
-    CategoryRoutingModule,
-    DocsComponentsModule,
+    UserRoutingModule,
     CardModule,
+    AvatarModule,
     FormModule,
     GridModule,
     ButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    SpinnerModule,
     FormModule,
     ButtonModule,
     ButtonGroupModule,
@@ -44,4 +47,5 @@ import { DocsComponentsModule } from '@docs-components/docs-components.module';
     ListGroupModule
   ]
 })
-export class CategoryModule { }
+export class UserModule { }
+

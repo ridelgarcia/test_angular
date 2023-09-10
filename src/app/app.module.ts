@@ -38,6 +38,10 @@ import {
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 
+import { ItemModule } from './views/item/item.module';
+import { CategoryModule } from './views/category/category.module';
+
+import { UserModule } from './views/user/user.module';
 const APP_CONTAINERS = [
   DefaultFooterComponent,
   DefaultHeaderComponent,
@@ -47,6 +51,9 @@ const APP_CONTAINERS = [
 @NgModule({
   declarations: [AppComponent, ...APP_CONTAINERS],
   imports: [
+    ItemModule,
+    CategoryModule,
+    UserModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
